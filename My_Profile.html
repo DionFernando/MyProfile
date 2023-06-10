@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .sec1{
+
+            background-color: #02021f;
+            position: relative;
+        }
+        /*=======================MAIN PAAGE================================*/
+        .container{
+            position: relative;
+            width:100% ;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /*---------------Bubbles--------------------*/
+        .bubbles{
+            position: relative;
+            left: 40vw;
+            display: flex;
+        }
+        .bubbles span{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background-color: #03a9f4;
+            border-radius: 50%;
+            box-shadow:0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+
+            animation: bubbles 15s linear infinite;
+            animation-duration: calc(125s / var(--i));
+        }
+        .bubbles span:nth-child(even){
+            background-color: #ff2d75;
+            box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+        }
+        @keyframes bubbles {
+            0%{
+                transform: translateY(100vh) scale(0);
+            }
+            100%{
+                transform: translateY(-10vh) scale(1);
+            }
+        }
+
+        /*----------------Big half circle-------------------*/
+        .color1{
+            position: absolute;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            border-bottom-left-radius: 360px;
+            background: linear-gradient(200deg,#db0715,darkblue );
+
+            animation: circle 12s infinite;
+        }
+
+        @keyframes circle {
+            50%{
+                width: 450px;
+                height: 450px;
+            }
+
+            100%{
+                width: 500px;
+                height: 500px;
+
+            }
+        }
+        .color2{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 200px;
+            border-top-right-radius: 360px;
+            background: linear-gradient(180deg,#db0715,darkblue );
+
+            animation: circle2 12s infinite;
+        }
+
+        @keyframes circle2 {
+            50%{
+                width: 150px;
+                height: 150px;
+            }
+
+            100%{
+                width: 200px;
+                height: 200px;
+
+            }
+        }
+
+        /*<!-------------------------Navi Bar------------------>*/
+
+        #navibar{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .lblnavi1{
+            position: relative;
+            right: -27vw;
+            top: 3vh;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .lblnavi1:hover{
+            color: #0dcedb;
+        }
+        .lblnavi2{
+            position: relative;
+            right: -14vw;
+            top: 3vh;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .lblnavi2:hover{
+            color: #0dcedb;
+        }
+        .lblnavi3{
+            position: relative;
+            right: -2vw;
+            top: 3vh;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .lblnavi3:hover{
+            color: #0dcedb;
+        }
+        .lblnavi4{
+            position: relative;
+            right: 11vw;
+            top: 3vh;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .lblnavi4:hover{
+            color: #0dcedb;
+        }
+        .lblnavi5{
+            position: relative;
+            right: 22vw;
+            top: 3vh;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .lblnavi5:hover{
+            color: #0dcedb;
+        }
+        .lblnavi6{
+            position: relative;
+            right: 32.5vw;
+            top: 3vh;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .lblnavi6:hover{
+            color: #0dcedb;
+
+        }
+        .lblnavi7{
+            position: relative;
+            right: 45vw;
+            top: 3vh;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .lblnavi7:hover{
+            color: #0dcedb;
+        }
+
+        /*------------------logo-------------------------*/
+        .logo h2{
+            position: absolute;
+            top: 0;
+            left: 1vw;
+            font-size: 3em;
+
+            /*transform: translate(-50%,-50%);*/
+        }
+
+        .logo h2:nth-child(1){
+            color: transparent;
+            -webkit-text-stroke: 2px blue;
+        }
+        .logo h2:nth-child(2){
+            color: #03a9f4;
+            animation: logoani 4s ease-in-out infinite;
+        }
+        @keyframes logoani {
+            0%,100%{
+                clip-path: polygon(0% 45%, 14% 41%, 29% 43%, 43% 51%, 61% 57%, 79% 57%, 100% 50%, 100% 100%, 0 100%);
+                -webkit-text-stroke: 1px white;
+            }
+            50%{
+                clip-path: polygon(0 55%, 18% 61%, 35% 60%, 54% 52%, 71% 40%, 88% 37%, 100% 45%, 100% 100%, 0 100%);
+                -webkit-text-stroke: 1px blue;
+            }
+        }
+
+        /*------------------body---------------------*/
+        .a1{
+            position: absolute;
+            left: 10vw;
+            top: 25vh;
+            font-size: 26px;
+            color: white;
+            font-family:Bahnschrift;
+        }
+        .name{
+            position: absolute;
+            left: 10vw;
+            top: 33vh;
+            font-size: 45px;
+            color: #0dcedb;
+            font-family:Bahnschrift;
+
+            animation: nameani 5s ease-in-out infinite;
+        }
+
+        @keyframes nameani {
+            0%,50%{
+                color: lightskyblue;
+            }
+            50%,100%{
+                color: lime;
+            }
+            100%,0%{
+                color: lightskyblue;
+            }
+        }
+
+        .wrapper{
+            display: inline-flex;
+            position: absolute;
+            top: 44vh;
+            left: 10vw;
+        }
+        .wrapper .stxt{
+            font-size: 30px;
+            font-weight: 400;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .wrapper .dtxt{
+            position: absolute;
+            top: -1vh;
+            left: 5vw;
+            margin-left: 15px;
+            height: 50px;
+            line-height: 50px;
+
+            overflow: hidden;
+        }
+        .dtxt li{
+            list-style: none;
+            font-size: 30px;
+            font-weight: 500;
+            font-family: Bahnschrift;
+            color: deepskyblue;
+        }
+        .dtxt li{
+            position: relative;
+            top: -2vh;
+            /*left: -2.5vw;*/
+            top: 0;
+            animation: slide 6s steps(4) infinite;
+        }
+
+        @keyframes slide {
+            100%{
+                top: -200px;
+            }
+
+        }
+        .dtx li span{
+            position: relative;
+        }
+        .dtxt li span::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background:#02021f ;
+            border-left: 3px solid deepskyblue;
+            animation: typing 1.5s steps(25) infinite;
+        }
+
+        @keyframes typing {
+            100%{
+                left: 100%;
+                margin: 0 -10px 0 10px;
+            }
+        }
+
+        /*----------------Photo---------------*/
+        .picglow1{
+            position: absolute;
+            bottom: 21vh;
+            left: 70.5vw;
+            width: 260px;
+            height: 270px;
+            background-color: red;
+            box-shadow: 15px 15px 20px #0dcedb;
+            opacity: 0.5;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+
+            animation: pic 4s infinite;
+        }
+
+        @keyframes pic {
+            50%{
+                background-color: #0dcedb;
+                box-shadow: 15px 15px 20px red;
+            }
+            100%{
+                background-color: red;
+                box-shadow: 15px 15px 20px #0dcedb;
+            }
+
+        }
+
+        .pic{
+            position: absolute;
+            bottom: 25vh;
+            left: 70vw;
+        }
+
+        /*=========================sec 2=====================================*/
+
+        #sec2{
+            position: relative;
+            width:100% ;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(45deg, #010112,#062e00, darkred);
+            background-size: 300% 300%;
+            animation: color 12s ease-in-out infinite;
+        }
+        .colorcircle{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            border-bottom-right-radius: 360px;
+            background: linear-gradient(180deg,darkblue,#db0715 );
+
+            animation: circle2 12s infinite;
+        }
+        @keyframes color {
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+
+        .topic2{
+            position: absolute;
+            top: 3vh;
+            left: 2vw;
+            color: deepskyblue;
+            font-size: 30px;
+            font-family: Bahnschrift;
+        }
+        .box1{
+            position: absolute;
+            left: 7vw;
+            top: 10vh;
+            height: 500px;
+            width:350px;
+            display: flex;
+            align-items: center;
+            background: rgba(0,0,0,0.5);
+            overflow: hidden;
+            border-radius: 20px;
+
+        }
+        .box1:before{
+            content: "";
+            position: absolute;
+            left: 25%;
+            width: 175px;
+            height: 600px;
+            background: linear-gradient(#00ccff, #d400d4);
+            animation: boxcolor 4s linear infinite;
+        }
+        .box1:after{
+            content: "";
+            position: absolute;
+            inset: 4px;
+            background-color: #01021c;
+            border-radius: 16px;
+        }
+        .box1:hover{
+            background-color: blue;
+        }
+
+        @keyframes boxcolor{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .content1{
+            position: relative;
+            display: flex;
+            left: 9vw;
+            top: 30vh;
+
+        }
+
+        .content1 span{
+            position: relative;
+            color: mediumblue;
+            font-size: 25px;
+            font-family: Bahnschrift;
+            text-transform: uppercase;
+            animation: cnt1 2s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+
+        @keyframes cnt1 {
+            0%{
+                transform: translateY(0px);
+            }
+            20%{
+                transform: translateY(-20px);
+                color: #03a9f4;
+            }
+            40%,100%{
+                transform: translateY(0px);
+
+            }
+        }
+
+        .cnt1bo{
+            position: absolute;
+            left: 9vw;
+            top: 42vh;
+            font-size: 20px;
+            color: deepskyblue;
+        }
+
+        .html1{
+            position: absolute;
+            left: 9vw;
+            top: 75vh;
+            color: white;
+            font-family: Bahnschrift;
+            animation: cnt1b 3s infinite;
+        }
+        @keyframes cnt1b {
+            0%{
+                color: royalblue;
+            }
+            50%{
+                color: white;
+            }
+            100%{
+                color: white;
+            }
+        }
+        .css1{
+            position: absolute;
+            left: 14vw;
+            top: 75vh;
+            color: white;
+            font-family: Bahnschrift;
+            animation: cnt2b 3s infinite;
+        }
+        @keyframes cnt2b {
+            0%{
+                color: white;
+            }
+            50%{
+                color: royalblue;
+            }
+            100%{
+                color: white;
+            }
+        }
+        .js1{
+            position: absolute;
+            left: 19vw;
+            top: 75vh;
+            color: white;
+            font-family: Bahnschrift;
+            animation: cnt3b 3s infinite;
+        }
+        @keyframes cnt3b {
+            0%{
+                color: white;
+            }
+            50%{
+                color: white;
+            }
+            100%{
+                color: royalblue;
+            }
+        }
+
+        .box2{
+            position: absolute;
+            left: 37vw;
+            top: 10vh;
+            height: 500px;
+            width:350px;
+            display: flex;
+            align-items: center;
+            background: rgba(0,0,0,0.5);
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .box2:before{
+            content: "";
+            position: absolute;
+            left: 25%;
+            width: 175px;
+            height: 600px;
+            background: linear-gradient(#00ccff, #d400d4);
+            animation: boxcolor 4s linear infinite;
+        }
+        .box2:after{
+            content: "";
+            position: absolute;
+            inset: 4px;
+            background-color: #01021c;
+            border-radius: 16px;
+        }
+        .box2:hover{
+            background-color: blue;
+        }
+
+        .content2{
+            position: relative;
+            display: flex;
+            left: 39vw;
+            top: 25vh;
+
+        }
+
+        .content2 span{
+            position: relative;
+            color: red;
+            font-size: 25px;
+            font-family: Bahnschrift;
+            text-transform: uppercase;
+            animation: cnt2 2s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+
+        @keyframes cnt2 {
+            0%{
+                transform: translateY(0px);
+            }
+            20%{
+                transform: translateY(-20px);
+                color: #ff2d75;
+            }
+            40%,100%{
+                transform: translateY(0px);
+            }
+        }
+
+        .cnt2bo{
+            position: absolute;
+            left: 39vw;
+            top: 42vh;
+            font-size: 20px;
+            color: #ff2d75 ;
+        }
+
+        .java2{
+            position: absolute;
+            left: 39vw;
+            top: 75vh;
+            color: white;
+            font-family: Bahnschrift;
+            animation: cnt11b 3s infinite;
+        }
+        @keyframes cnt11b {
+            0%{
+                color: mediumvioletred;
+            }
+            50%{
+                color: white;
+            }
+            100%{
+                color: white;
+            }
+        }
+        .sql2{
+            position: absolute;
+            left: 44vw;
+            top: 75vh;
+            color: white;
+            font-family: Bahnschrift;
+            animation: cnt12b 3s infinite;
+        }
+        @keyframes cnt12b {
+            0%{
+                color: white;
+            }
+            50%{
+                color: mediumvioletred;
+            }
+            100%{
+                color: white;
+            }
+        }
+        @keyframes cnt3b {
+            0%{
+                color: white;
+            }
+            50%{
+                color: white;
+            }
+            100%{
+                color: royalblue;
+            }
+        }
+        .box3{
+            position: absolute;
+            left: 67vw;
+            top: 10vh;
+            height: 500px;
+            width:350px;
+            display: flex;
+            align-items: center;
+            background: rgba(0,0,0,0.5);
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .box3:before{
+            content: "";
+            position: absolute;
+            left: 25%;
+            width: 175px;
+            height: 600px;
+            background: linear-gradient(#00ccff, #d400d4);
+            animation: boxcolor 4s linear infinite;
+        }
+        .box3:after{
+            content: "";
+            position: absolute;
+            inset: 4px;
+            background-color: #01021c;
+            border-radius: 16px;
+        }
+        .box3:hover{
+            background-color: blue;
+        }
+        .content3{
+            position: relative;
+            display: flex;
+            left: 69vw;
+            top: 20vh;
+
+        }
+
+        .content3 span{
+            position: relative;
+            color: darkgreen;
+            font-size: 25px;
+            font-family: Bahnschrift;
+            text-transform: uppercase;
+            animation: cnt3 2s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+
+        @keyframes cnt3 {
+            0%{
+                transform: translateY(0px);
+            }
+            20%{
+                transform: translateY(-20px);
+                color: lime;
+            }
+            40%,100%{
+                transform: translateY(0px);
+            }
+        }
+        .cnt3bo{
+            position: absolute;
+            left: 69vw;
+            top: 42vh;
+            font-size: 20px;
+            color: lime ;
+        }
+
+        .fx3{
+            position: absolute;
+            left: 69vw;
+            top: 75vh;
+            color: white;
+            font-family: Bahnschrift;
+            animation: cnt33b 3s infinite;
+        }
+        @keyframes cnt33b {
+            0%{
+                color: green;
+            }
+            50%{
+                color: white;
+            }
+            100%{
+                color: white;
+            }
+        }
+        .figma3{
+            position: absolute;
+            left: 75vw;
+            top: 75vh;
+            color: white;
+            font-family: Bahnschrift;
+            animation: cnt32b 3s infinite;
+        }
+        @keyframes cnt32b {
+            0%{
+                color: white;
+            }
+            50%{
+                color: green;
+            }
+            100%{
+                color: white;
+            }
+        }
+       /* !*----------------------sec 3--------------------------*!
+        #sec3{
+            position: relative;
+            width:100% ;
+            height: 100vh;
+            background: #00020f;
+            background-size: 300% 300%;
+            animation: sky 5s linear infinite;
+        }
+        @keyframes sky {
+            0%,49%{
+                background: #00020f ;
+            }
+            50%,51%{
+                background: #3f456e;
+            }
+            52%,53%{
+                background: #00020f;
+            }
+            54%,55%{
+                background: #3f456e;
+            }
+            56%,100%{
+                background: #00020f ;
+            }
+        }
+        .cloud1{
+            position: absolute;
+            left: -10vw;
+            top: -5vh;
+            animation: cloud 20s linear infinite;
+        }
+        .cloud2{
+            position: absolute;
+            left: -22vw;
+            top: -5vh;
+            animation: cloud 20s linear infinite;
+        }
+
+        @keyframes cloud {
+            50%{
+                left: 20vw;
+            }
+            100%{
+                right: 0vw;
+            }
+        }
+
+        .rain{
+            position: relative;
+            left: 0vw;
+            top: 36vh;
+            display: flex;
+
+            animation: raining 20s linear infinite;
+        }
+        @keyframes raining {
+            50%{
+                left: 35vw;
+            }
+            100%{
+                right: 0vw;
+            }
+        }
+        .rain span{
+            position: relative;
+            width: 5px;
+            height: 20px;
+            background-color: #03a9f4;
+
+            animation: rain 1s linear reverse infinite;
+            animation-duration: calc(125s / var(--i));
+        }
+        .rain span:nth-child(even){
+            background-color:blue;
+        }
+        @keyframes rain {
+            0%{
+                transform: translateY(100vh) scale(0);
+            }
+            100%{
+                transform: translateY(-10vh) scale(1);
+            }
+        }*/
+
+/*=======================sec 4=================================*/
+        #sec4{
+            position: relative;
+            width:100% ;
+            height: 100vh;/*
+            background-color: #02021f;*/
+            background: linear-gradient(90deg, #020126, #1a012e, #5c0202);
+            background-size: 300% 300%;
+            animation: color 4s ease-in-out infinite;
+        }
+
+        .ball1{
+            position: absolute;
+            left: 50vw;
+            top: 0vh;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, blue,#ff2d75 );
+            animation: ballflow1 3s linear infinite;
+        }
+        .ball1:hover{
+            width: 70px;
+            height: 70px;
+        }
+        .ball2:hover{
+            width: 70px;
+            height: 70px;
+        }
+        .ball3:hover{
+            width: 70px;
+            height: 70px;
+        }
+        .ball4:hover{
+            width: 70px;
+            height: 70px;
+        }
+        .ball5:hover{
+             width: 70px;
+             height: 70px;
+        }
+        .ball6:hover{
+            width: 70px;
+            height: 70px;
+        }
+
+        @keyframes ballflow1 {
+            0% {
+            }
+            50%{
+                left: 0vw;
+                top: 50%;
+                /*background: linear-gradient(45deg,#ff2d75,blue);*/
+            }
+            100%{
+                background: linear-gradient(45deg,#ff2d75,blue);
+            }
+        }
+        .ball2{
+            position: absolute;
+            left: 25vw;
+            top: 0vh;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, blue,#ff2d75 );
+            animation: ballflow2 4.7s linear infinite;
+        }
+        @keyframes ballflow2 {
+            0%{
+
+            }
+            50%{
+                left: 0vw;
+                top: 25%;
+            }
+            100%{
+                background: linear-gradient(45deg,#ff2d75,blue);
+            }
+        }
+        .ball3{
+            position: absolute;
+            left: 75vw;
+            top: 0vh;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, blue,#ff2d75 );
+            animation: ballflow3 5s linear infinite;
+        }
+        @keyframes ballflow3 {
+            0%{
+
+            }
+            50%{
+                left: 0vw;
+                top: 75%;
+            }
+            100%{
+                background: linear-gradient(45deg,#ff2d75,blue);
+            }
+        }
+        .ball4{
+            position: absolute;
+            left: 95vw;
+            top: 25%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, blue,#ff2d75 );
+            animation: ballflow4 6s linear infinite;
+        }
+        @keyframes ballflow4 {
+            0%{
+
+            }
+            50%{
+                left: 25%;
+                top: 93vh;
+            }
+            100%{
+                background: linear-gradient(45deg,#ff2d75,blue);
+            }
+        }
+        .ball5{
+            position: absolute;
+            left: 95vw;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, blue,#ff2d75 );
+            animation: ballflow5 5.1s linear infinite;
+        }
+        @keyframes ballflow5 {
+            0%{
+
+            }
+            50%{
+                left: 50%;
+                top: 93vh;
+            }
+            100%{
+                background: linear-gradient(45deg,#ff2d75,blue);
+            }
+        }
+        .ball6{
+            position: absolute;
+            left: 95vw;
+            top: 75%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, blue,#ff2d75 );
+            animation: ballflow6 3.5s linear infinite;
+        }
+        @keyframes ballflow6 {
+            0%{
+
+            }
+            50%{
+                left: 75%;
+                top: 93vh;
+            }
+            100%{
+                background: linear-gradient(45deg,#ff2d75,blue);
+            }
+        }
+
+        .topic3{
+            position: absolute;
+            top: 3vh;
+            left: 2vw;
+            color: deepskyblue;
+            font-size: 30px;
+            font-family: Bahnschrift;
+        }
+
+        .jvafx{
+            position: absolute;
+            left: 10vw;
+            top: 15vh;
+            width: 75vw;
+            height: 5vh;
+            background: gray;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius:20px;
+        }
+        .jvafx-ani{
+            position: absolute;
+            left: 10vw;
+            top: 15vh;
+            width: 65vw;
+            height: 5vh;
+            background:linear-gradient(45deg, blue,#00012e);
+            border-bottom-left-radius:20px;
+
+            animation: barani 2s alternate infinite;
+        }
+        .JavaFxL{
+            font-family: Impact;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 13vw;
+            top: 16vh;
+        }
+        .L1{
+            font-family: Impact;
+            font-size: 20px;
+            color: darkblue;
+            position: absolute;
+            left: 80vw;
+            top: 16vh;
+
+            animation: Lcolor 2s alternate infinite;
+        }
+
+        @keyframes Lcolor {
+            0%{
+
+            }
+            100%{
+                color: black ;
+            }
+        }
+        @keyframes barani {
+            0%{
+                width: 10vw;
+                /*background: linear-gradient(45deg, red, pink);*/
+            }
+        }
+        .jva{
+            position: absolute;
+            left: 10vw;
+            top: 25vh;
+            width: 75vw;
+            height: 5vh;
+            background: gray;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius:20px;
+        }
+        .jva-ani{
+            position: absolute;
+            left: 10vw;
+            top: 25vh;
+            width: 50vw;
+            height: 5vh;
+            background:linear-gradient(45deg, dodgerblue,hotpink);
+            border-bottom-left-radius:20px;
+
+            animation: barani 2s alternate infinite;
+        }
+        .L2{
+            font-family: Impact;
+            font-size: 20px;
+            color: darkblue;
+            position: absolute;
+            left: 80vw;
+            top: 26vh;
+
+            animation: Lcolor 2s alternate infinite;
+        }
+        .JavaL{
+            font-family: Impact;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 13vw;
+            top: 26vh;
+        }
+        .fgma{
+            position: absolute;
+            left: 10vw;
+            top: 35vh;
+            width: 75vw;
+            height: 5vh;
+            background: gray;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius:20px;
+        }
+        .fgma-ani{
+            position: absolute;
+            left: 10vw;
+            top: 35vh;
+            width: 72vw;
+            height: 5vh;
+            background:linear-gradient(45deg, blue,#00012e);
+            border-bottom-left-radius:20px;
+
+            animation: barani 2s alternate infinite;
+        }
+        .L3{
+            font-family: Impact;
+            font-size: 20px;
+            color: darkblue;
+            position: absolute;
+            left: 80vw;
+            top: 36vh;
+
+            animation: Lcolor 2s alternate infinite;
+        }
+        .FigmaL{
+            font-family: Impact;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 13vw;
+            top: 36vh;
+        }
+        .sqll{
+            position: absolute;
+            left: 10vw;
+            top: 45vh;
+            width: 75vw;
+            height: 5vh;
+            background: gray;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius:20px;
+        }
+        .sqll-ani{
+            position: absolute;
+            left: 10vw;
+            top: 45vh;
+            width: 68vw;
+            height: 5vh;
+            background:linear-gradient(45deg, dodgerblue,hotpink);
+            border-bottom-left-radius:20px;
+
+            animation: barani 2s alternate infinite;
+        }
+        .SQLL{
+            font-family: Impact;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 13vw;
+            top: 46vh;
+        }
+        .L4{
+            font-family: Impact;
+            font-size: 20px;
+            color: darkblue;
+            position: absolute;
+            left: 80vw;
+            top: 46vh;
+
+            animation: Lcolor 2s alternate infinite;
+        }
+        .htmll{
+            position: absolute;
+            left: 10vw;
+            top: 55vh;
+            width: 75vw;
+            height: 5vh;
+            background: gray;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius:20px;
+        }
+        .htmll-ani{
+            position: absolute;
+            left: 10vw;
+            top: 55vh;
+            width: 70vw;
+            height: 5vh;
+            background:linear-gradient(45deg, blue,#00012e);
+            border-bottom-left-radius:20px;
+
+            animation: barani 2s alternate infinite;
+        }
+        .HTMLL{
+            font-family: Impact;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 13vw;
+            top: 56vh;
+        }
+        .L5{
+            font-family: Impact;
+            font-size: 20px;
+            color: darkblue;
+            position: absolute;
+            left: 80vw;
+            top: 56vh;
+
+            animation: Lcolor 2s alternate infinite;
+        }
+        .csss{
+            position: absolute;
+            left: 10vw;
+            top: 65vh;
+            width: 75vw;
+            height: 5vh;
+            background: gray;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius:20px;
+        }
+        .csss-ani{
+            position: absolute;
+            left: 10vw;
+            top: 65vh;
+            width: 72vw;
+            height: 5vh;
+            background:linear-gradient(45deg, dodgerblue,hotpink);
+            border-bottom-left-radius:20px;
+
+            animation: barani 2s alternate infinite;
+        }
+        .CSSL{
+            font-family: Impact;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 13vw;
+            top: 66vh;
+        }
+        .L6{
+            font-family: Impact;
+            font-size: 20px;
+            color: darkblue;
+            position: absolute;
+            left: 80vw;
+            top: 66vh;
+
+            animation: Lcolor 2s alternate infinite;
+        }
+        .jss{
+            position: absolute;
+            left: 10vw;
+            top: 75vh;
+            width: 75vw;
+            height: 5vh;
+            background: gray;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius:20px;
+        }
+        .jss-ani{
+            position: absolute;
+            left: 10vw;
+            top: 75vh;
+            width: 60vw;
+            height: 5vh;
+            background:linear-gradient(45deg, blue,#00012e);
+            border-bottom-left-radius:20px;
+
+            animation: barani 2s alternate infinite;
+        }
+        .JSL{
+            font-family: Impact;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 13vw;
+            top: 76vh;
+        }
+        .L7{
+            font-family: Impact;
+            font-size: 20px;
+            color: darkblue;
+            position: absolute;
+            left: 80vw;
+            top: 76vh;
+
+            animation: Lcolor 2s alternate infinite;
+        }
+
+        /*---------------------------sec 5---------------------------------*/
+        #sec5{
+            position: relative;
+            width:100% ;
+            height: 100vh;
+            background-color: #02021f;
+            /*overflow: hidden;*/
+            background: linear-gradient(90deg, #020126, #1a012e, #5c0202);
+            background-size: 300% 300%;
+            animation: color 4s ease-in-out infinite;
+
+            /*background: linear-gradient(90deg, #020126, #1a012e, #5c0202);*/
+            /*background-size: 300% 300%;*//*
+            animation: color 4s ease-in-out infinite;*/
+        }
+
+        .dotshover span{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            display: block;
+        }
+        .dotshover span::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: yellow;
+            transform: scale(0.1);
+            box-shadow: 0 0 10px yellowgreen,
+            0 0 20px lime,
+            0 0 40px lime,
+            0 0 60px lime,
+            0 0 80px lime,
+            0 0 100px lime;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: 2s;
+        }
+        .dotshover span:hover::before{
+            transform: scale(1);
+            transition: 0s;
+        }
+
+        .topic4{
+            position: absolute;
+            top: 3vh;
+            left: 2vw;
+            color: deepskyblue;
+            font-size: 30px;
+            font-family: Bahnschrift;
+        }
+
+        .rectngle01{
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            top: 0;
+            bottom: 40vh;
+            border-bottom: 300px solid #030202;
+            border-right: 500px solid transparent;
+
+            animation: gunu 3s alternate infinite;
+        }
+        .rectngle02{
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            bottom: 0;
+            border-top: 300px solid #030202;
+            border-right: 500px solid transparent;
+
+            animation: gund 3s alternate infinite;
+        }
+        @keyframes gunu {
+            0%{
+                border-bottom: 300px solid #000114;
+            }
+            100%{
+                border-bottom: 300px solid #000217;
+            }
+        }
+        @keyframes gund {
+            0%{
+                border-top: 300px solid #000114;
+            }
+            100%{
+                border-top: 300px solid #000217;
+            }
+
+        }
+        .ballshoot{
+            position: absolute;
+            left: 0;
+            top: 46vh;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, red,yellow );
+            animation: ballshoot 0.9s linear infinite;
+        }
+        @keyframes ballshoot {
+            0%{
+
+            }
+            50%{
+                left:32vw;
+            }
+            100%{
+                background: linear-gradient(45deg,yellow,red);
+            }
+        }
+
+       /* .ball10{
+            position: absolute;
+            left: 21vw;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, blue,#ff2d75 );
+            animation: ballflow10 4s linear infinite;
+        }
+        @keyframes ballflow10 {
+            0%{
+
+            }
+            50%{
+                left: 10vw;
+                top: 10vh;
+            }
+            100%{
+                background: linear-gradient(45deg,#ff2d75,blue);
+            }
+        }*/
+        /*-----------------------secFinal-------------------------------------*/
+        .secFinal{
+            position: relative;
+            width:100% ;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #141414;
+        }
+
+        .recbig{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40vh;
+            background-color: #030202;
+        }
+        .rectngle1{
+            position: absolute;
+            width: 50%;
+            height: 100px;
+            bottom: 40vh;
+            right: 0;
+            border-bottom: 100px solid #030202;
+            border-right: 675px solid transparent;
+        }
+        .rectngle2{
+            position: absolute;
+            width: 50%;
+            height: 100px;
+            bottom: 40vh;
+            left: 0;
+            border-bottom: 100px solid #030202;
+            border-left: 675px solid transparent;
+        }
+        /*------------------logo-------------------------*/
+        .logoend h2{
+            position: absolute;
+            top: 50vh;
+            left: 46vw;
+            font-size: 3em;
+
+            /*transform: translate(-50%,-50%);*/
+        }
+
+        .logoend h2:nth-child(1){
+            color: transparent;
+            -webkit-text-stroke: 2px blue;
+        }
+        .logoend h2:nth-child(2){
+            color: #03a9f4;
+            animation: logoani 4s ease-in-out infinite;
+        }
+
+        .dion{
+            position: absolute;
+            top: 65vh;
+            left: 39vw;
+            font-size: 18px;
+            color: white;
+            font-family: Bahnschrift;
+        }
+        .mail{
+            position: absolute;
+            top: 75vh;
+            left: 36vw;
+            font-size: 25px;
+            color: white;
+            font-family: Bahnschrift;
+        }
+
+    </style>
+
+</head>
+<!--========================================================================================================================================================-->
+<!--========================================================================================================================================================-->
+<!--========================================================================================================================================================-->
+<!--========================================================================================================================================================-->
+<!--========================================================================================================================================================-->
+<!--========================================================================================================================================================-->
+<!--========================================================================================================================================================-->
+
+<body>
+
+<link rel="stylesheet" href="<link rel=" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+<main class="sec1">
+    <div class="color1"></div>
+    <div class="color2"></div>
+<div class="wrapper">
+    <div class="stxt"> I'm a </div>
+    <ul class="dtxt">
+        <li><span>Developer</span></li>
+        <li><span>Photographer</span></li>
+        <li><span>Youtuber</span></li>
+        <li><span>Editor</span></li>
+    </ul>
+</div>
+
+<div class="container">
+<div class="bubbles">
+    <span style="--i:11;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:24;"></span>
+    <span style="--i:10;"></span>
+    <span style="--i:14;"></span>
+    <span style="--i:23;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:16;"></span>
+    <span style="--i:19;"></span>
+    <span style="--i:20;"></span>
+    <span style="--i:22;"></span>
+    <span style="--i:25;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:21;"></span>
+    <span style="--i:15;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:26;"></span>
+    <span style="--i:17;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:28;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:24;"></span>
+    <span style="--i:10;"></span>
+    <span style="--i:14;"></span>
+    <span style="--i:23;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:16;"></span>
+    <span style="--i:19;"></span>
+    <span style="--i:20;"></span>
+    <span style="--i:22;"></span>
+    <span style="--i:25;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:21;"></span>
+    <span style="--i:15;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:26;"></span>
+    <span style="--i:17;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:28;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:28;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:12;"></span>
+
+</div>
+</div>
+
+
+<!-------------------------Navi Bar------------------>
+<main>
+
+    <section id="navibar">
+
+        <label class="lblnavi1">Contact Me</label>
+        <label class="lblnavi2">My Work</label>
+        <label class="lblnavi3">Activities</label>
+        <label class="lblnavi4">Education</label>
+        <label class="lblnavi5">Skills</label>
+        <label class="lblnavi6">What I Do</label>
+        <label class="lblnavi7">About Me</label>
+    </section>
+</main>
+
+<!--------------------Logo--------------------->
+<div class="logo">
+    <h2>KDF</h2>
+    <h2>KDF</h2>
+</div>
+
+
+<!-------------------body--css----------------------->
+<section>
+    <div class="a1">Hello, It's Me</div>
+    <div class="name">Dion Fernando</div>
+</section>
+
+</main>
+<!----------pic glow--------------------------------->
+<section>
+    <div class="picglow1"></div>
+    <div class="picglow2"></div>
+</section>
+<section class="pic"><img src="assets/images/photofunny.net_-removebg-preview.png" alt="Me" width="270px" height="300px"></section>
+
+<!--========================sec 2========================================-->
+
+<main id="sec2">
+    <div class="colorcircle"></div>
+    <label class="topic2">What I Do</label>
+    <section class="box1"></section>
+    <section class="box2"></section>
+    <section class="box3"></section>
+
+    <div class="content1">
+        <span style="--i:1">W</span>
+        <span style="--i:2">e</span>
+        <span style="--i:3">b</span>
+        <span style="--i:4">-</span>
+        <span style="--i:5">D</span>
+        <span style="--i:6">e</span>
+        <span style="--i:7">v</span>
+        <span style="--i:8">o</span>
+        <span style="--i:9">l</span>
+        <span style="--i:10">o</span>
+        <span style="--i:11">p</span>
+        <span style="--i:12">i</span>
+        <span style="--i:13">n</span>
+        <span style="--i:14">g</span>
+    </div>
+    <div class="cnt1bo">I do coding for any type of <br><br> business required web application
+        <br><br><br><br><br>Languages :</div>
+    <div class="html1">HTML</div>
+    <div class="css1">CSS</div>
+    <div class="js1">JavaScript</div>
+
+
+    <div class="content2">
+        <span style="--i:1">B</span>
+        <span style="--i:2">a</span>
+        <span style="--i:3">c</span>
+        <span style="--i:4">k</span>
+        <span style="--i:5">-</span>
+        <span style="--i:6">E</span>
+        <span style="--i:7">n</span>
+        <span style="--i:8">d</span>
+        <span style="--i:9">-</span>
+        <span style="--i:10">D</span>
+        <span style="--i:11">e</span>
+        <span style="--i:12">v</span>
+        <span style="--i:13">o</span>
+        <span style="--i:14">l</span>
+        <span style="--i:15">o</span>
+        <span style="--i:16">p</span>
+        <span style="--i:17">i</span>
+        <span style="--i:18">n</span>
+        <span style="--i:19">g</span>
+    </div>
+    <div class="cnt2bo">I maintain the mechanisms that <br><br> process data and perform actions
+        <br><br>on webite
+        <br><br><br>Languages :</div>
+    <div class="java2">Java</div>
+    <div class="sql2">SQL</div>
+
+    <div class="content3">
+        <span style="--i:1">U</span>
+        <span style="--i:2">i</span>
+        <span style="--i:3">-</span>
+        <span style="--i:4">U</span>
+        <span style="--i:5">x</span>
+        <span style="--i:6">-</span>
+        <span style="--i:10">D</span>
+        <span style="--i:11">e</span>
+        <span style="--i:12">v</span>
+        <span style="--i:13">o</span>
+        <span style="--i:14">l</span>
+        <span style="--i:15">o</span>
+        <span style="--i:16">p</span>
+        <span style="--i:17">i</span>
+        <span style="--i:18">n</span>
+        <span style="--i:19">g</span>
+    </div>
+    <div class="cnt3bo">I design user friendly and user <br><br> attractive interfaces
+        <br><br>
+        <br><br><br>Languages :</div>
+    <div class="fx3">JavaFx</div>
+    <div class="figma3">Figma</div>
+</main>
+
+<!--====================================sec 3========================================-->
+<!--
+<main id="sec3">
+    <div class="cloud1"><img src="assets/images/Cloud2.jpg-removebg-preview.png" alt="cloud"></div>
+    <div class="cloud2"><img src="assets/images/Cloud2.jpg-removebg-preview.png" alt="cloud"></div>
+
+    <div class="rain">
+        <span style="&#45;&#45;i:14;"></span>
+        <span style="&#45;&#45;i:23;"></span>
+        <span style="&#45;&#45;i:18;"></span>
+        <span style="&#45;&#45;i:16;"></span>
+        <span style="&#45;&#45;i:19;"></span>
+        <span style="&#45;&#45;i:20;"></span>
+        <span style="&#45;&#45;i:22;"></span>
+        <span style="&#45;&#45;i:25;"></span>
+        <span style="&#45;&#45;i:10;"></span>
+        <span style="&#45;&#45;i:24;"></span>
+        <span style="&#45;&#45;i:10;"></span>
+        <span style="&#45;&#45;i:14;"></span>
+        <span style="&#45;&#45;i:11;"></span>
+        <span style="&#45;&#45;i:12;"></span>
+        <span style="&#45;&#45;i:24;"></span>
+        <span style="&#45;&#45;i:10;"></span>
+        <span style="&#45;&#45;i:14;"></span>
+        <span style="&#45;&#45;i:23;"></span>
+        <span style="&#45;&#45;i:18;"></span>
+        <span style="&#45;&#45;i:16;"></span>
+        <span style="&#45;&#45;i:19;"></span>
+        <span style="&#45;&#45;i:20;"></span>
+        <span style="&#45;&#45;i:22;"></span>
+        <span style="&#45;&#45;i:25;"></span>
+        <span style="&#45;&#45;i:10;"></span>
+        <span style="&#45;&#45;i:24;"></span>
+        <span style="&#45;&#45;i:10;"></span>
+        <span style="&#45;&#45;i:14;"></span>
+        <span style="&#45;&#45;i:23;"></span>
+        <span style="&#45;&#45;i:18;"></span>
+        <span style="&#45;&#45;i:16;"></span>
+        <span style="&#45;&#45;i:19;"></span>
+        <span style="&#45;&#45;i:11;"></span>
+        <span style="&#45;&#45;i:12;"></span>
+        <span style="&#45;&#45;i:24;"></span>
+        <span style="&#45;&#45;i:10;"></span>
+        <span style="&#45;&#45;i:14;"></span>
+        <span style="&#45;&#45;i:23;"></span>
+        <span style="&#45;&#45;i:18;"></span>
+        <span style="&#45;&#45;i:16;"></span>
+        <span style="&#45;&#45;i:14;"></span>
+        <span style="&#45;&#45;i:23;"></span>
+        <span style="&#45;&#45;i:24;"></span>
+        <span style="&#45;&#45;i:10;"></span>
+        <span style="&#45;&#45;i:14;"></span>
+        <span style="&#45;&#45;i:23;"></span>
+        <span style="&#45;&#45;i:18;"></span>
+        <span style="&#45;&#45;i:18;"></span>
+        <span style="&#45;&#45;i:16;"></span>
+        <span style="&#45;&#45;i:12;"></span>
+        <span style="&#45;&#45;i:24;"></span>
+        <span style="&#45;&#45;i:10;"></span>
+        <span style="&#45;&#45;i:14;"></span>
+        <span style="&#45;&#45;i:23;"></span>
+    </div>
+</main>-->
+
+<!--========================sec 4========================================-->
+
+<main id="sec4">
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+    <div class="ball3"></div>
+    <div class="ball4"></div>
+    <div class="ball5"></div>
+    <div class="ball6"></div>
+
+
+    <label class="topic3">My Skills</label>
+
+    <div class="jvafx"></div>
+    <div class="jvafx-ani"></div>
+    <label class="JavaFxL">JavaFx</label>
+    <label class="L1">80%</label>
+
+    <div class="jva"></div>
+    <div class="jva-ani"></div>
+    <label class="JavaL">Java</label>
+    <label class="L2">60%</label>
+
+    <div class="fgma"></div>
+    <div class="fgma-ani"></div>
+    <label class="FigmaL">Figma</label>
+    <label class="L3">97%</label>
+
+    <div class="sqll"></div>
+    <div class="sqll-ani"></div>
+    <label class="SQLL">SQL</label>
+    <label class="L4">85%</label>
+
+    <div class="htmll"></div>
+    <div class="htmll-ani"></div>
+    <label class="HTMLL">HTML</label>
+    <label class="L5">90%</label>
+
+    <div class="csss"></div>
+    <div class="csss-ani"></div>
+    <label class="CSSL">CSS</label>
+    <label class="L6">95%</label>
+
+    <div class="jss"></div>
+    <div class="jss-ani"></div>
+    <label class="JSL">JavaScript</label>
+    <label class="L7">70%</label>
+</main>
+
+<!--====================================sec 5========================================-->
+
+<main id="sec5">
+    <div class="rectngle01"></div>
+    <div class="rectngle02"></div>
+
+    <div class="ballshoot"></div>
+
+<section class="dotshover">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</section>
+    <label class="topic4">Education</label>
+
+</main>
+
+<!------------------------------------Sec final------------------------------------------------>
+<main class="secFinal">
+    <div class="recbig"></div>
+    <div class="rectngle1"></div>
+    <div class="rectngle2"></div>
+    <div class="logoend">
+        <h2>KDF</h2>
+        <h2>KDF</h2>
+    </div>
+    <label class="dion">Designed by Kavisha Dion Fernando</label>
+    <label class="mail">dionfernandoOfficial113@gmail.com</label>
+    
+
+</main>
+</body>
+</html>
